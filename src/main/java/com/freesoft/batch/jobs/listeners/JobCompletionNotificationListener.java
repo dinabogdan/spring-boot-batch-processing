@@ -12,9 +12,11 @@ import org.springframework.batch.core.listener.JobExecutionListenerSupport;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.jdbc.core.RowMapper;
+import org.springframework.stereotype.Component;
 
 import com.freesoft.business.objects.Person;
 
+@Component
 public class JobCompletionNotificationListener extends JobExecutionListenerSupport {
 
 	private static final Logger LOGGER = LoggerFactory.getLogger(JobCompletionNotificationListener.class);
@@ -29,7 +31,7 @@ public class JobCompletionNotificationListener extends JobExecutionListenerSuppo
 	@Override
 	public void afterJob(JobExecution jobExecution) {
 		if(jobExecution.getStatus() == BatchStatus.COMPLETED) {
-			LOGGER.info("#### Job Finished --------> Go check the results!");
+			System.out.println("#### Job Finished --------> Go check the results!");
 			
 			List<Person> results = jdbcTemplate.query("SELECT first_name, last_name from people", new RowMapper<Person>(){
 				@Override

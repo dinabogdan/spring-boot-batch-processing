@@ -1,0 +1,9 @@
+com\freesoft\batch\jobs\listeners\JobCompletionNotificationListener$1.class
+com\freesoft\business\objects\Person.class
+com\freesoft\batch\configurations\BatchConfiguration$1$1.class
+com\freesoft\batch\executor\Application.class
+com\freesoft\batch\jobs\listeners\JobCompletionNotificationListener.class
+com\freesoft\batch\configurations\BatchConfiguration.class
+com\freesoft\batch\processors\PersonItemProcessor.class
+com\freesoft\batch\configurations\BatchConfiguration$1$2.class
+com\freesoft\batch\configurations\BatchConfiguration$1.class

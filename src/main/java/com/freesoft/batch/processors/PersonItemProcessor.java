@@ -18,7 +18,7 @@ public class PersonItemProcessor implements ItemProcessor<Person, Person> {
 
 		Person processedPerson = new Person(firstName, lastName);
 
-		LOGGER.info("Converting (" + item + ") into (" + processedPerson + ")");
+		LOGGER.info("#### Converting (" + item + ") into (" + processedPerson + ")");
 
 		return processedPerson;
 	}
